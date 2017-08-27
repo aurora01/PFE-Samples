@@ -38,8 +38,6 @@ RPC_STATUS SessionInfo::Uninitialize()
     RPC_STATUS status = RPC_S_OK;
     RPC_STATUS result = RPC_S_OK;
 
-    RPC_Shutdown();
-
     CloseAllSession();
 
     status = RpcStringFree(&s_pszStringBinding);

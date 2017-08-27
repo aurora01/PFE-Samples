@@ -12,7 +12,7 @@ RPC_STATUS RPC_Server_Initialize()
     RPC_STATUS status;
     RPC_WSTR pszSecurity = NULL;
     unsigned int    cMinCalls = 1;
-    unsigned int    fDontWait = FALSE;
+    unsigned int    fDontWait = TRUE;
 
     status = RpcServerRegisterIfEx(IRpcDemo_v1_0_s_ifspec, NULL, NULL, 0, RPC_C_LISTEN_MAX_CALLS_DEFAULT, NULL);
     if (RPC_S_OK == status)
@@ -30,6 +30,13 @@ RPC_STATUS RPC_Server_Initialize()
 
     return status;
 }
+
+void RPC_Server_Shutdown(void)
+{
+    RpcMgmtStopServerListening(NULL);
+    RpcServerUnregisterIf(NULL, NULL, FALSE);
+}
+
 
 /******************************************************/
 /*         MIDL allocate and free                     */

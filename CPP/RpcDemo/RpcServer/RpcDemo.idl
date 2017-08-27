@@ -8,6 +8,5 @@ import "ocidl.idl";
 interface IRpcDemo
 {
     void RPC_HelloProc([in] unsigned long handle, [in, string] wchar_t * pszString, [out] long * longOut);
-    void RPC_Shutdown(void);
     [callback] void CallbackProc_1([in] unsigned long handle, [in, string] wchar_t * pszStr);
 }
