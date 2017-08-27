@@ -40,10 +40,12 @@ public:
 
 #pragma region API
     void API_HelloProc(wchar_t * pszString, long *lData);
+    void API_SetCallback1(PCALLBACK1_PROC pfnCallback);
 #pragma endregion API
 
 private:
     unsigned long m_handle;
+    PCALLBACK1_PROC m_pfnCallback1;
 
 };
 

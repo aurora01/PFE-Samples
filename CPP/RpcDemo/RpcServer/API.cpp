@@ -6,7 +6,7 @@ void RPC_HelloProc(/* [in] */unsigned long handle, /* [string][in] */ wchar_t * 
 {
     *longOut = 0x7f7f6363L;
     wprintf(L"\nMSG:%s", pszString);
-    CallbackProc_1(handle, L"CallbackProc()");
+    CallbackProc_1(handle, L"Call back from: RPC_HelloProc()");
 }
 
 void RPC_Shutdown(void)

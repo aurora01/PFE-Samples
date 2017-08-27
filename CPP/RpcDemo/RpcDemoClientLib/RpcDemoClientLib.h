@@ -16,3 +16,6 @@
 RPCDEMOCLIENTLIB_API DWORD RpcDemo_OpenSession(unsigned long* handle);
 RPCDEMOCLIENTLIB_API DWORD RpcDemo_CloseSession(unsigned long handle);
 RPCDEMOCLIENTLIB_API void RpcDemo_HelloProc(unsigned long handle, wchar_t * pszString, long * longOut);
+
+typedef void(WINAPI *PCALLBACK1_PROC)(wchar_t * pszString);
+RPCDEMOCLIENTLIB_API void RpcDemo_SetCallback1(unsigned long handle, PCALLBACK1_PROC pfnCallback);

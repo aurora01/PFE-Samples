@@ -23,3 +23,13 @@ RPCDEMOCLIENTLIB_API void RpcDemo_HelloProc(unsigned long handle, wchar_t * pszS
         pSession->API_HelloProc(pszString, longOut);
     }
 }
+
+RPCDEMOCLIENTLIB_API void RpcDemo_SetCallback1(unsigned long handle, PCALLBACK1_PROC pfnCallback)
+{
+    auto pSession = SessionInfo::GetSession(handle);
+
+    if (NULL != pSession)
+    {
+        pSession->API_SetCallback1(pfnCallback);
+    }
+}

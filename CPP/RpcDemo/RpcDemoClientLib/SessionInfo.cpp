@@ -122,7 +122,8 @@ void SessionInfo::CloseAllSession()
 }
 
 SessionInfo::SessionInfo()
-           : m_handle(0)
+    : m_handle(0)
+    , m_pfnCallback1(NULL)
 {
     while (0 == s_handle_id || s_HandlMap.end() != FindSession(s_handle_id))
     {
@@ -137,8 +138,9 @@ SessionInfo::SessionInfo()
 
 SessionInfo::~SessionInfo()
 {
-    auto pIter = FindSession(m_handle);
+    m_pfnCallback1 = NULL;
 
+    auto pIter = FindSession(m_handle);
     if (s_HandlMap.end() != pIter)
     {
         s_HandlMap.erase(pIter);
@@ -147,7 +149,10 @@ SessionInfo::~SessionInfo()
 
 void SessionInfo::Callback_1(wchar_t * pszString)
 {
-    UNREFERENCED_PARAMETER(pszString);
+    if (NULL != m_pfnCallback1)
+    {
+        m_pfnCallback1(pszString);
+    }
 }
 
 void CallbackProc_1(/* [in] */unsigned long handle, /* [string][in] */ wchar_t * pszString)
@@ -165,4 +170,10 @@ void SessionInfo::API_HelloProc(wchar_t * pszString, long *lData)
 {
     ::RPC_HelloProc(m_handle, pszString, lData);
 }
+
+void SessionInfo::API_SetCallback1(PCALLBACK1_PROC pfnCallback)
+{
+    m_pfnCallback1 = pfnCallback;
+}
+
 #pragma endregion API
