@@ -10,7 +10,6 @@ static WCHAR g_pszEndpoint[] = L"\\pipe\\hello";
 
 int main()
 {
-    handle_t IRpcDemo_IfHandle = NULL;
     RPC_STATUS status;
     RPC_WSTR pszUuid = NULL;
     RPC_WSTR pszNetworkAddress = NULL;
