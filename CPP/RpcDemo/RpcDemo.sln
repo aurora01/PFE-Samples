@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RpcServer", "RpcServer\RpcServer.vcxproj", "{693492C7-5AD0-4779-923F-A1E85C8AB9A1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RpcClient", "RpcClient\RpcClient.vcxproj", "{C9B5F204-5B7F-40A7-8765-E406022FFD3E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RpcDemoClientLib", "RpcDemoClientLib\RpcDemoClientLib.vcxproj", "{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{693492C7-5AD0-4779-923F-A1E85C8AB9A1} = {693492C7-5AD0-4779-923F-A1E85C8AB9A1}
 	EndProjectSection
@@ -34,6 +36,14 @@ Global
 		{C9B5F204-5B7F-40A7-8765-E406022FFD3E}.Release|x64.Build.0 = Release|x64
 		{C9B5F204-5B7F-40A7-8765-E406022FFD3E}.Release|x86.ActiveCfg = Release|Win32
 		{C9B5F204-5B7F-40A7-8765-E406022FFD3E}.Release|x86.Build.0 = Release|Win32
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Debug|x64.ActiveCfg = Debug|x64
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Debug|x64.Build.0 = Debug|x64
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Debug|x86.ActiveCfg = Debug|Win32
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Debug|x86.Build.0 = Debug|Win32
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Release|x64.ActiveCfg = Release|x64
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Release|x64.Build.0 = Release|x64
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Release|x86.ActiveCfg = Release|Win32
+		{897650EF-A3EE-48CF-8E47-9CE2B8B0ECF8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
