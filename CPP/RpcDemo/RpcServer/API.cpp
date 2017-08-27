@@ -2,9 +2,11 @@
 #include "RpcDemo_h.h"
 
 
-void HelloProc(/* [string][in] */ wchar_t * pszString)
+void HelloProc(/* [string][in] */ wchar_t * pszString,  /* [out] */ long * longOut)
 {
+    *longOut = 0x7f7f6363L;
     wprintf(L"\nMSG:%s", pszString);
+    CallbackProc(L"CallbackProc()");
 }
 
 void Shutdown(void)

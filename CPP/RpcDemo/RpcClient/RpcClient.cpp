@@ -18,6 +18,8 @@ int main()
     PWSTR pszString = L"hello, world..............................";
     unsigned long ulCode;
 
+    long lData = 0;
+
     status = RpcStringBindingCompose(
                             pszUuid,
                             (RPC_WSTR)g_pszProtocolSequence,
@@ -33,7 +35,8 @@ int main()
 
     RpcTryExcept
     {
-        HelloProc(pszString);
+        HelloProc(pszString, &lData);
+        wprintf(L"\nReturned = %08x\n", lData);
         Shutdown();
     }
     RpcExcept(1)
@@ -52,6 +55,11 @@ int main()
         exit(status);
 
     return 0;
+}
+
+void CallbackProc(/* [string][in] */ wchar_t * pszString)
+{
+    wprintf(L"\nCALLBACK:%s", pszString);
 }
 
 

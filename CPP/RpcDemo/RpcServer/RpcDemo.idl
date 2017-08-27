@@ -7,6 +7,7 @@ import "ocidl.idl";
 ]
 interface IRpcDemo
 {
-    void HelloProc([in, string] wchar_t * pszString);
+    void HelloProc([in, string] wchar_t * pszString, [out] long * longOut);
     void Shutdown(void);
+    [callback] void CallbackProc([in, string] wchar_t * pszStr);
 }
