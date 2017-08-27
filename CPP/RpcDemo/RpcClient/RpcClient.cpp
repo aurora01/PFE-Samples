@@ -28,28 +28,26 @@ int main()
     if (status) exit(status);
 
     status = RpcBindingFromStringBinding(pszStringBinding, &IRpcDemo_IfHandle);
-
     if (status)
         exit(status);
 
     RpcTryExcept
     {
         HelloProc(pszString);
-    Shutdown();
+        Shutdown();
     }
-        RpcExcept(1)
+    RpcExcept(1)
     {
         ulCode = RpcExceptionCode();
         wprintf(L"\nRuntime reported exception 0x%lx = %ld\n", ulCode, ulCode);
     }
     RpcEndExcept
 
-        status = RpcStringFree(&pszStringBinding);
-
-    if (status) exit(status);
+    status = RpcStringFree(&pszStringBinding);
+    if (status)
+        exit(status);
 
     status = RpcBindingFree(&IRpcDemo_IfHandle);
-
     if (status)
         exit(status);
 
