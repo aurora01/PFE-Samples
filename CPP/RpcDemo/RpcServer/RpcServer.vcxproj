@@ -159,6 +159,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InitSvr.cpp" />
     <ClCompile Include="RpcDemo_s.c" />
     <ClCompile Include="RpcServer.cpp" />
     <ClCompile Include="API.cpp" />

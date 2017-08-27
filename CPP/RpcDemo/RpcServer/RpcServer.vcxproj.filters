@@ -44,6 +44,9 @@
     <ClCompile Include="API.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InitSvr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="RpcDemo.idl">

@@ -25,5 +25,5 @@ int main()
 
 void WINAPI Callback1_Proc(wchar_t * pszString)
 {
-    wprintf(L"\nCALLBACK_1 - %s\n", pszString);
+    wprintf(L"\Callback1_Proc - %s\n", pszString);
 }
