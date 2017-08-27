@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/CPP/RpcDemo/RpcServer/RpcDemo_s.c
+/CPP/RpcDemo/RpcServer/RpcDemo_h.h
+/CPP/RpcDemo/RpcServer/RpcDemo_c.c
