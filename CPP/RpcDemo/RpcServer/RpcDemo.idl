@@ -1,0 +1,12 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+    uuid(BB6571B9-D19A-4456-B0DF-4D323BAC9294),
+    version(1.0)
+]
+interface IRpcDemo
+{
+    void HelloProc([in, string] wchar_t * pszString);
+    void Shutdown(void);
+}
